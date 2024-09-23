@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Liga e Desliga</title>
+    <style>
+        #toggleButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: rgb(55, 231, 15);
+            background-color: #ed1212fc;
+        }
+        #toggleButton.off {
+            background-color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton" class="off" onclick="toggleButton()">Desligado</button>
+
+    <script>
+        function toggleButton() {
+            var button = document.getElementById('toggleButton');
+            if (button.classList.contains('off')) {
+                button.classList.remove('off');
+                button.textContent = 'Ligado';
+                button.style.backgroundColor = '#28a745'; // Verde para ligado
+            } else {
+                button.classList.add('off');
+                button.textContent = 'Desligado';
+                button.style.backgroundColor = '#6c757d'; // Cinza para desligado
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+var input = require('fs').readFileSync('stdin', 'utf8');
+var [a, b, c] = input.split(" ").map(item => parseFloat(item));
+var pi = 3.14159;
+var tria = (a * c) / 2.0;
+var ci = pi * Math.pow(c, 2);
+var tra = ((a + b) * c) / 2.0;
+var qua = b * b;
+var re = a * b;
+console.log("TRIANGULO: " + tria.toFixed(3));
+console.log("CIRCULO: " + ci.toFixed(3));
+console.log("TRAPEZIO: " + tra.toFixed(3));
+console.log("QUADRADO: " + qua.toFixed(3));
+console.log("RETANGULO: " + re.toFixed(3));
